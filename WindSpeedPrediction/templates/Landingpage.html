@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Here</title>
+    <link rel="stylesheet" href="/static/Landingpage.css">
+</head>
+<body>
+    <div class="heading">
+        <h2>Wind Speed Prediction</h2><br>
+    </div>
+    <div class="container">
+        <form action="prediction" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="rain">Rain:</label>
+                <input type="number" id="rain" name="rain" required><br><br>
+
+                <label for="tmax">Max. Temp.:</label>
+                <input type="number" id="tmax" name="tmax" required><br><br>
+
+                <label for="tmin">Min. Temp.:</label>
+                <input type="number" id="tmin" name="tmin" required><br><br>
+
+                <label for="tming">Grass Min. Temp.:</label>
+                <input type="number" id="tming" name="tming" required><br><br>
+
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" required><br><br>
+
+                <label for="month">Month:</label>
+                <input type="number" id="month" name="month" required><br><br>
+
+                <label for="day">Day:</label>
+                <input type="number" id="day" name="day" required><br><br>
+
+                <button type="submit">Predict</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
